@@ -6,17 +6,14 @@ function! s:warn(str) abort
 endfunction
 
 function! s:RunRepl(cmd, is_bg) abort
-  if exists(':Start') == 2
-    execute 'Start' . (a:is_bg ? '!' : '') a:cmd
-  else
-    call s:warn('dispatch.vim not installed, please install it.')
     if has('nvim')
-      call s:warn('neovim detected, falling back on termopen()')
-      tabnew
-      call termopen(a:cmd)
-      tabprevious
+        call s:warn('neovim detected, falling back on termopen()')
+        new
+        call termopen(a:cmd)
+        hide
+    else
+        call s:warn('vim-dispatch-neovim not installed, please install it.')
     endif
-  endif
 endfunction
 
 function! jack_in#boot_cmd(...)
