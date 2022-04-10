@@ -1,15 +1,15 @@
-= vim-jack-in
+= nevim-vim-jack-in
 
 Jack in to Boot, Clj & Leiningen from Vim. Inspired by the feature in CIDER.el.
 
-Depends on https://github.com/tpope/vim-dispatch[vim-dispatch] to run commands in background. If you're using Neovim I can recommend https://github.com/radenling/vim-dispatch-neovim[vim-dispatch-neovim]
+Unlike https://github.com/clojure-vim/vim-jack-in[vim-jack-in] it opens terminal buffer in the same tab.
+
+Depends on https://github.com/radenling/vim-dispatch-neovim[vim-dispatch-neovim] to run commands in background. 
 
 [source,vim]
 ----
-Plug 'tpope/vim-dispatch'
-Plug 'clojure-vim/vim-jack-in'
-" Only in Neovim:
 Plug 'radenling/vim-dispatch-neovim'
+Plug 'clojure-vim/vim-jack-in'
 ----
 
 Provides a couple of helper commands for "jacking" in to a Clojure REPL by
