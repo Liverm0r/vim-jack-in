@@ -7,12 +7,11 @@ endfunction
 
 function! s:RunRepl(cmd, is_bg) abort
     if has('nvim')
-        call s:warn('neovim detected, falling back on termopen()')
         new
         call termopen(a:cmd)
         hide
     else
-        call s:warn('vim-dispatch-neovim not installed, please install it.')
+        call s:warn('can not find neovim in the system, abort')
     endif
 endfunction
 
