@@ -1,3 +1,7 @@
+= Depricated
+
+I just use one https://github.com/Liverm0r/dotfiles/blob/lua/.config/nvim/fnl/lang/clojure.fnl[file] to implement the same.
+
 = nevim-vim-jack-in
 
 Jack in to Boot, Clj & Leiningen from Vim. Inspired by the feature in CIDER.el.
